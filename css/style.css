@@ -1,0 +1,188 @@
+body {
+    overflow: hidden;
+    font-family: SegoeUI;
+}
+
+:root {
+    --blue-color: rgba(24, 22, 167);
+    --lightGroundImg: url('../images/light_dot.jpg');
+    --darkGroundImg: url('../images/dark_dot.jpg');
+}
+
+.bgLight{
+    background-image: var(--lightGroundImg);
+    
+}
+.bgDark{
+    background-image: var(--darkGroundImg);
+    
+}
+
+#Home {
+    background-image: url('../images/bg.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+#mainNav {
+    transition: background-color 1s, padding 1s;
+}
+
+nav {
+    li {
+        padding-right: 20px;
+    }
+
+    a {
+        color: white !important;
+    }
+
+    a:hover {
+        color: #dc3545 !important;
+    }
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(161, 161, 161, 0.781);
+    border-radius: 50%;
+    margin: 4px;
+    font-size: 20px;
+}
+
+.text-blue {
+    color: var(--blue-color)
+}
+
+.text-sec h2 {
+    font-size: 8rem;
+    color: #ecebeb;
+}
+
+.text-sec h3 {
+    font-size: 5rem;
+    color: rgba(0, 0, 0);
+    margin-top: 32px;
+    font-weight: 400;
+}
+
+
+
+#Services h2 {
+    color: #ffffff12;
+}
+
+#Services h3 {
+    color: #fffefe;
+}
+
+
+.BRANDING {
+    position: relative;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.BRANDING::after {
+    content: " ";
+    position: absolute;
+    width: 13%;
+    height: 3px;
+    background-color: rgb(250, 61, 61);
+    top: 100%;
+    right: 50%;
+    transform: translate(50%);
+}
+
+.icon-anchor {
+    top: -30px;
+    right: 50%;
+    background-color: rgb(31, 30, 30);
+    border: 1px solid white;
+    padding: 30px;
+    transform: translateX(50%);
+}
+
+.carousel-item img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    transform: translateY(60%);
+}
+
+.client-job::after {
+    content: " ";
+    position: absolute;
+    width: 6rem;
+    height: 3px;
+    background-color: rgb(67, 55, 201);
+    top: 100%;
+    right: 50%;
+    transform: translate(50%);
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 50px;
+    height: 50px;
+    text-indent: 0px;
+    border-radius: 50%;
+}
+
+#buttonUp {
+    display: none;
+}
+
+#Loading {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    z-index: 9999999999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    animation: roll 1s ease-in-out infinite alternate;
+}
+
+.loader:after {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    border-radius: 50%;
+    border: 5px solid;
+    border-color: #020101 transparent;
+}
+
+@keyframes roll {
+    0% {
+        transform: translateX(-150%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(150%) rotate(360deg);
+    }
+}
+
+@font-face {
+    font-family: SegoeUI;
+    src:
+        local("Segoe UI Semilight"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff2) format("woff2"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff) format("woff"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.ttf) format("truetype");
+    font-weight: 200;
+}
